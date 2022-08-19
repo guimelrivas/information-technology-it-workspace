@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Landing Page</title>
+    </head>
+    <body>
+
+
+<!-- start css -->
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1.45;
+}
+header {
+    color: #FFFFFF;
+    background-color: #284b63;
+    padding: 80px 0;
+    text-align: center;
+}
+h1 {
+  font-size: 48px;
+  margin: 0 0 16px 0;
+}
+h2 {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0 0 16px 0;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    max-width: 900px;
+}
+.btn {
+    display: inline-block;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    background: #549DA0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #468486;
+}
+section {
+    text-align: center;
+    padding: 40px 0;
+}
+.about {
+    background: #FFFFFF;
+    color: #000000;
+}
+.estudies {
+    background: black;
+    color:#FFFFFF;
+}
+.skills {
+    list-style: square inside;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer {
+    background: #353535;
+    padding: 32px 0;
+    text-align: center;
+    color: #868686;
+}
+/*Clock time*/
+
+#test{
+    text-align:center;
+    font-family:serif;
+    color:blue;
+    letter-spacing:2px;
+    font-size:70px;
+    text-shadow:5px 3px 25px white;
+    padding:5px;
+    border:2px lightskyblue;
+    border-radius:30px;
+}
+
+#ttt{
+    color:white;
+    text-align:center;
+    padding:5px;
+    border:2px lightskyblue;
+    font-family:serif;
+    border-radius:30px;
+}
+#all{
+    padding:5px;
+    border:5px solid lightskyblue;
+    font-family:serif;
+    border-radius:30px;
+}
+
+}
+
+</style>
+<!-- end css -->
+
+<!-- Presentación -->
+    <header>
+      <div class="container">
+        <h1>Hola, yo soy Miguel! </h1>
+        <h2>Welcome to my simple site!</h2>
+      </div>
+    </header>
+
+<!-- About me! -->
+    <section class="about">
+      <div class="container">
+        <p>Me considero aficionado a las tecnologias, he seguido el desarrollo del software libre (linux) por más de 20 años, he intentado aprender programación varias veces... python, html, css, javascript, bash... sin mucho éxito y pequeños avances. Sin embargo a lo largo de los años he logrado adquirir experiencia; todo esto a la par de mi desarrollo académico y profesional.</p>
+        <br><br>
+        <p>Además, el conocimiento y la experiencia adquirido me han ayudado a aplicar soluciones tecnológicas a diferentes tipos de tareas y asesorar procesos para mejorar gestiones.</p>
+      </div>
+    </section>
+
+<!-- My estudies -->
+    <section class="estudies">
+        <table>
+          <tr>
+            <a>Recientemente, termine un bootcamp de negocios digitales con ruby on rails, 2022</a>
+          </tr>
+          <br>
+
+        </table>
+<br><br><br>
+        <span>"Los que no pueden cambiar sus mentes no pueden cambiar nada." <br>George Bernard Shaw.</span>
+    </section>
+
+<!-- start Javascript -->
+<script>
+window.onload = function(){
+//alert('Hi, You Guys are awesome! Already 2k likes?!!  WOW Thank you soooooo much!!');
+printTime();
+};
+
+function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    var day = d.getDay();
+    var date = d.getDate();
+    var month = d.getMonth();
+    var year = d.getFullYear();
+
+        switch (day){
+
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+           }
+
+
+        if(hours<10){
+            hours = "0" + hours;
+        }
+        if(mins<10){
+
+            mins = "0" + mins;
+        }
+        if(secs<10){
+
+            secs = "0" + secs;
+        }
+
+   month = month + 1; document.getElementById("test").innerHTML = hours+":"+mins+":"+secs;
+document.getElementById("ttt").innerHTML = day + ", " + date + "." + month + "." + year;
+}
+setInterval(printTime, 1000);
+
+</script>
+<!-- end Javascript -->
+
+<!-- My Skills section start -->
+    <div class="skills">
+        <h1><span> Skills </span></h1>
+        <ul>
+            <li>HTML <br />
+                <progress min="0" max="100" value="50"></progress>
+            </li>
+            <li>CSS <br />
+                <progress min="0" max="100" value="40"></progress>
+            </li>
+            <li>JavaScript <br />
+                <progress min="0" max="100" value="20"></progress>
+            </li>
+            <li>Bootstrap <br />
+                <progress min="0" max="100" value="30"></progress>
+            </li>
+            <li>Ruby <br />
+                <progress min="0" max="100" value="20"></progress>
+            </li>
+            <li>Rails <br />
+                <progress min="0" max="100" value="20"></progress>
+            </li>
+            <li>Python <br />
+                <progress min="0" max="100" value="15"></progress>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Clock start -->
+    <br>
+      <div class= "container">
+        <p id="text">It's time to?...</p>
+          <form id="all">
+            <div id="test">loading</div>
+            <div id="ttt"></div>
+          </form>
+    </div>
+    <br>
+    <!-- Clock end -->
+
+
+<!-- Footer and contact info -->
+    <footer>
+    Contactame
+    <br><br>
+      <a href="https://twitter.com/mrivaslezama">Enviame un tweet! &#128512;</a>
+    <br>
+      <a href="https://www.linkedin.com/in/miguel-rivas-6839b421">Agregame a tu red linkedin!</a>
+
+    </footer>
+</body>
+</html>
